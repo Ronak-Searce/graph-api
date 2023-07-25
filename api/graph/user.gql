@@ -1,0 +1,37 @@
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+}
+
+type Id {
+  id: ID!
+}
+
+type Status {
+  status: Int!
+}
+
+type Query {
+  getUser(input: ID!): User!
+  getUsers: [User!]!
+}
+
+input NewUser {
+  firstName: String!
+  lastName: String!
+}
+input OldUser {
+  id: ID!
+  firstName: String!
+  lastName: String!
+}
+input IdInput {
+  id: ID!
+}
+
+type Mutation {
+  createUser(input: NewUser!): User!
+  updateUser(input: OldUser!): Status!
+  deletedUser(input: IdInput!): Status!
+}
