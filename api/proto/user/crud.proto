@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package crud;
+
+option go_package = "github.com/lyazii22/picnic-asg1/crud/proto";
+
+message CreateUserRequest{
+    string firstname = 1;
+	string lastname = 2;
+}
+
+message UserInfo{
+    string id = 1;
+    string firstname = 2;
+	string lastname = 3;
+}
+
+message Users{
+    repeated UserInfo users =1;
+}
+
+message Id {
+    string id=1;
+}
+
+message Status {
+    int32 status=1;
+}
+message Empty {
+}
+
+ 
+service Crud {
+    rpc CreateUser (CreateUserRequest) returns (UserInfo);
+    rpc GetUser (Id) returns (UserInfo);
+    rpc GetUsers(Empty) returns (Users);
+    rpc UpdateUser (UserInfo) returns (Status);
+    rpc DeleteUser (Id) returns (Status);
+}
