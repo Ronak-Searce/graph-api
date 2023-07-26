@@ -2,31 +2,17 @@
 
 package graph
 
-type ID struct {
-	ID string `json:"id"`
-}
-
-type IDInput struct {
-	ID string `json:"id"`
+type Login struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
 }
 
 type NewUser struct {
-	FirstName string `json:"firstName"`
-	LastName  string `json:"lastName"`
-}
-
-type OldUser struct {
-	ID        string `json:"id"`
-	FirstName string `json:"firstName"`
-	LastName  string `json:"lastName"`
-}
-
-type Status struct {
-	Status int `json:"status"`
+	Username string `json:"username"`
+	Password string `json:"password"`
 }
 
 type User struct {
-	ID        string `json:"id"`
-	FirstName string `json:"firstName"`
-	LastName  string `json:"lastName"`
+	ID   string `json:"id"`
+	Name string `json:"name"`
 }

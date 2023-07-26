@@ -12,27 +12,20 @@ import (
 
 // CreateUser is the resolver for the createUser field.
 func (r *mutationResolver) CreateUser(ctx context.Context, input graph.NewUser) (*graph.User, error) {
-	panic(fmt.Errorf("not implemented: CreateUser - createUser"))
+	return &graph.User{
+		ID:   "id123",
+		Name: input.Username,
+	}, nil
 }
 
-// UpdateUser is the resolver for the updateUser field.
-func (r *mutationResolver) UpdateUser(ctx context.Context, input graph.OldUser) (*graph.Status, error) {
-	panic(fmt.Errorf("not implemented: UpdateUser - updateUser"))
-}
-
-// DeletedUser is the resolver for the deletedUser field.
-func (r *mutationResolver) DeletedUser(ctx context.Context, input graph.IDInput) (*graph.Status, error) {
-	panic(fmt.Errorf("not implemented: DeletedUser - deletedUser"))
+// Login is the resolver for the login field.
+func (r *mutationResolver) Login(ctx context.Context, input graph.Login) (string, error) {
+	return "sdfjakjshflkajshfklashdjkfahks", nil
 }
 
 // GetUser is the resolver for the getUser field.
-func (r *queryResolver) GetUser(ctx context.Context, input string) (*graph.User, error) {
+func (r *queryResolver) GetUser(ctx context.Context, id string) (*graph.User, error) {
 	panic(fmt.Errorf("not implemented: GetUser - getUser"))
-}
-
-// GetUsers is the resolver for the getUsers field.
-func (r *queryResolver) GetUsers(ctx context.Context) ([]*graph.User, error) {
-	panic(fmt.Errorf("not implemented: GetUsers - getUsers"))
 }
 
 // Mutation returns graph.MutationResolver implementation.

@@ -1,0 +1,23 @@
+type User {
+  id: ID!
+  name: String!
+}
+
+input NewUser {
+  username: String!
+  password: String!
+}
+
+input Login {
+  username: String!
+  password: String!
+}
+
+type Query {
+  getUser(id: ID!): User!
+}
+
+type Mutation {
+  createUser(input: NewUser!): User!
+  login(input: Login!): String! #dummmy token
+}
