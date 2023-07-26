@@ -1,8 +1,8 @@
 package main
 
 import (
-	graph "graph-api/internal/pkg/graph"
-	graphres "graph-api/pkg/graph"
+	"graph-api/internal/pkg/graph"
+	graphPkg "graph-api/pkg/graph"
 	"log"
 	"net/http"
 	"os"
@@ -14,12 +14,13 @@ import (
 const defaultPort = "8080"
 
 func main() {
+
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = defaultPort
 	}
 
-	srv := handler.NewDefaultServer(graphres.NewExecutableSchema(graphres.Config{Resolvers: &graph.Resolver{}}))
+	srv := handler.NewDefaultServer(graphPkg.NewExecutableSchema(graphPkg.Config{Resolvers: &graph.Resolver{}}))
 
 	http.Handle("/", playground.Handler("GraphQL playground", "/query"))
 	http.Handle("/query", srv)
