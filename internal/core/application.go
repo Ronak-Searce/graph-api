@@ -18,20 +18,17 @@ import (
 	"gitlab.com/picnic-app/backend/libs/golang/healthcheck"
 	"gitlab.com/picnic-app/backend/libs/golang/monitoring/tracing"
 
-	// "graph-api/internal/app/graph"
-	// "graph-api/internal/pkg/auth"
-
 	"graph-api/internal/app/graph"
-	graphPkg "graph-api/internal/pkg/graph"
-	// "graph-api/internal/pkg/utils"
+	graphInt "graph-api/internal/pkg/graph"
+
 	graphGen "graph-api/pkg/graph"
 )
 
-const banResponse = "You can not perform this operation"
+// const banResponse = "You can not perform this operation"
 
 // IGraphService ...
 type IGraphService interface {
-	Register(srv graphPkg.IResolver)
+	Register(srv graphInt.IResolver)
 }
 
 type application struct {
@@ -60,7 +57,7 @@ func (a *application) Run(healthLive http.Handler, services ...*graph.Implementa
 }
 
 func (a *application) initGraphQL(impl *graph.Implementation) {
-	reg := &graphPkg.Resolver{}
+	reg := &graphInt.Resolver{}
 	impl.Register(reg)
 
 	srv := handler.New(graphGen.NewExecutableSchema(graphGen.Config{Resolvers: reg}))

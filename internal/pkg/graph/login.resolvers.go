@@ -6,26 +6,22 @@ package graph
 
 import (
 	"context"
-	"fmt"
 	"graph-api/pkg/graph"
 )
 
 // CreateUser is the resolver for the createUser field.
 func (r *mutationResolver) CreateUser(ctx context.Context, input graph.NewUser) (*graph.User, error) {
-	return &graph.User{
-		ID:   "id123",
-		Name: input.Username,
-	}, nil
+	return r.res.CreateUser(ctx, input)
 }
 
 // Login is the resolver for the login field.
 func (r *mutationResolver) Login(ctx context.Context, input graph.Login) (string, error) {
-	return "sdfjakjshflkajshfklashdjkfahks", nil
+	return r.res.Login(ctx, input) //r.implementation.Login(ctx,input)
 }
 
 // GetUser is the resolver for the getUser field.
 func (r *queryResolver) GetUser(ctx context.Context, id string) (*graph.User, error) {
-	panic(fmt.Errorf("not implemented: GetUser - getUser"))
+	return r.res.GetUser(ctx, id)
 }
 
 // Mutation returns graph.MutationResolver implementation.

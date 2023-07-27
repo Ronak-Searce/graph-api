@@ -3,8 +3,9 @@ package graph
 import (
 	"context"
 
-	loginPb "graph-api/api/proto"
 	graphInt "graph-api/internal/pkg/graph"
+
+	loginPb "github.com/lyazii22/grpc-login/login/proto"
 )
 
 type ILoginProvider interface {
