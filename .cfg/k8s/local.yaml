@@ -1,0 +1,12 @@
+service:
+  ports:
+    http: 8080
+    grpc: 8082
+    debug: 8084
+
+env:
+  svc:
+    login:
+      host: localhost
+      port: 8082
+      secure: false

@@ -88,9 +88,9 @@ func main() {
 	monitoring.RegisterPrometheusSuffix()
 
 	loginCli := login.NewClient(ctx,
-		viper.GetString("env.svc.app.host"),
-		viper.GetInt("env.svc.app.port"),
-		viper.GetBool("env.svc.app.secure"),
+		viper.GetString("env.svc.login.host"),
+		viper.GetInt("env.svc.login.port"),
+		viper.GetBool("env.svc.login.secure"),
 	)
 
 	// jwtVerifier, err := jwt.NewVerifier(&jwt.Config{HMACSecretKey: viper.GetString("env.jwt.hmac_secret")})

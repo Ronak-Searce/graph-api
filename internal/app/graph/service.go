@@ -10,7 +10,7 @@ import (
 
 type ILoginProvider interface {
 	CreateUser(ctx context.Context, in *loginPb.CreateUserRequest) (*loginPb.CreateUserResponse, error)
-	GetUser(ctx context.Context, id string) (*loginPb.CreateUserResponse, error)
+	GetUser(ctx context.Context, id string) (*loginPb.GetUserResponse, error)
 	Login(ctx context.Context, in *loginPb.LoginRequest) (*loginPb.LoginResponse, error)
 }
 
