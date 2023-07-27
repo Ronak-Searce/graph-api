@@ -1,8 +1,8 @@
 // package main
 
 // import (
-// 	"graph-api/internal/pkg/graph"
-// 	graphPkg "graph-api/pkg/graph"
+	// "graph-api/internal/pkg/graph"
+	graphPkg "graph-api/pkg/graph"
 // 	"log"
 // 	"net/http"
 // 	"os"
