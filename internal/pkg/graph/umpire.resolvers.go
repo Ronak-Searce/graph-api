@@ -6,11 +6,10 @@ package graph
 
 import (
 	"context"
-	"fmt"
 	"graph-api/pkg/graph"
 )
 
 // CreateUmpire is the resolver for the createUmpire field.
 func (r *mutationResolver) CreateUmpire(ctx context.Context, input graph.NewUmpire) (*graph.Umpire, error) {
-	panic(fmt.Errorf("not implemented: CreateUmpire - createUmpire"))
+	return r.res.CreateUmpire(ctx, input)
 }
