@@ -1,23 +1,13 @@
-type User {
-  id: ID!
-  name: String!
-}
-
-input NewUser {
+input LoginInput{
   username: String!
   password: String!
 }
 
-input Login {
-  username: String!
-  password: String!
-}
-
-type Query {
-  getUser(id: ID!): User!
+type LoginOutput{
+  token: String!
+  umpire: Umpire!
 }
 
 type Mutation {
-  createUser(input: NewUser!): User!
-  login(input: Login!): String! #dummmy token
+  login(input: LoginInput!): LoginOutput! #dummmy token
 }

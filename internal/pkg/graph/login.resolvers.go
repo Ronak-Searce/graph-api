@@ -9,26 +9,12 @@ import (
 	"graph-api/pkg/graph"
 )
 
-// CreateUser is the resolver for the createUser field.
-func (r *mutationResolver) CreateUser(ctx context.Context, input graph.NewUser) (*graph.User, error) {
-	return r.res.CreateUser(ctx, input)
-}
-
 // Login is the resolver for the login field.
-func (r *mutationResolver) Login(ctx context.Context, input graph.Login) (string, error) {
+func (r *mutationResolver) Login(ctx context.Context, input graph.LoginInput) (*graph.LoginOutput, error) {
 	return r.res.Login(ctx, input) //r.implementation.Login(ctx,input)
-}
-
-// GetUser is the resolver for the getUser field.
-func (r *queryResolver) GetUser(ctx context.Context, id string) (*graph.User, error) {
-	return r.res.GetUser(ctx, id)
 }
 
 // Mutation returns graph.MutationResolver implementation.
 func (r *Resolver) Mutation() graph.MutationResolver { return &mutationResolver{r} }
 
-// Query returns graph.QueryResolver implementation.
-func (r *Resolver) Query() graph.QueryResolver { return &queryResolver{r} }
-
 type mutationResolver struct{ *Resolver }
-type queryResolver struct{ *Resolver }

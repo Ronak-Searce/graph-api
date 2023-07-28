@@ -14,7 +14,7 @@ type Resolver struct {
 
 // IResolver ...
 type IResolver interface {
-	graph.QueryResolver
+	// graph.QueryResolver
 	graph.MutationResolver
 	// graph.SubscriptionResolver
 }

@@ -2,17 +2,25 @@
 
 package graph
 
-type Login struct {
+type LoginInput struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
 }
 
-type NewUser struct {
+type LoginOutput struct {
+	Token  string  `json:"token"`
+	Umpire *Umpire `json:"umpire"`
+}
+
+type NewUmpire struct {
 	Username string `json:"username"`
+	Name     string `json:"name"`
+	Email    string `json:"email"`
 	Password string `json:"password"`
 }
 
-type User struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
+type Umpire struct {
+	Name     string `json:"name"`
+	Username string `json:"username"`
+	Email    string `json:"email"`
 }
