@@ -1,7 +1,7 @@
 service:
   ports:
     http: 8080
-    grpc: 8082
+    grpc: 50051
     debug: 8084
 
 env:
@@ -12,5 +12,5 @@ env:
       secure: false
     afl:
       host: localhost
-      port: 8082
+      port: 50051
       secure: false
