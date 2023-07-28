@@ -1,19 +1,16 @@
-type Umpire{
-    name: String!
-    username: String!
-    email: String!
+type Umpire {
+  name: String!
+  username: String!
+  email: String!
 }
 
-input NewUmpire{
-    username: String!
-    name: String!
-    email: String!
-    password: String!
+input NewUmpire {
+  username: String!
+  name: String!
+  email: String!
+  password: String!
 }
 
-
-
-
-extend type Mutation{
-    createUmpire(input: NewUmpire!): Umpire
+extend type Mutation {
+  createUmpire(input: NewUmpire!): Umpire
 }

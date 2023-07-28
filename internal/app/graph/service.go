@@ -5,25 +5,24 @@ import (
 
 	graphInt "graph-api/internal/pkg/graph"
 
-	loginPb "github.com/lyazii22/grpc-login/login/proto"
+	aflPb "graph-api/api/proto/afl"
 )
 
-type ILoginProvider interface {
-	CreateUser(ctx context.Context, in *loginPb.CreateUserRequest) (*loginPb.CreateUserResponse, error)
-	GetUser(ctx context.Context, id string) (*loginPb.GetUserResponse, error)
-	Login(ctx context.Context, in *loginPb.LoginRequest) (*loginPb.LoginResponse, error)
+type IAflProvider interface {
+	Login(ctx context.Context, in *aflPb.LoginRequest) (*aflPb.LoginResponse, error)
+	CreateUmpire(ctx context.Context, in *aflPb.CreateUmpireRequest) (*aflPb.CreateUmpireResponse, error)
 }
 
 type Implementation struct {
-	login ILoginProvider
+	afl IAflProvider
 }
 
 // NewGraphAPI creates new graphql service instance
 func NewGraphAPI(
-	cliLogin ILoginProvider,
+	cliAfl IAflProvider,
 ) *Implementation {
 	return &Implementation{
-		login: cliLogin,
+		afl: cliAfl,
 	}
 }
 

@@ -1,34 +1,3 @@
-// package main
-
-// import (
-// "graph-api/internal/pkg/graph"
-// graphPkg "graph-api/pkg/graph"
-// 	"log"
-// 	"net/http"
-// 	"os"
-
-// 	"github.com/99designs/gqlgen/graphql/handler"
-// 	"github.com/99designs/gqlgen/graphql/playground"
-// )
-
-// const defaultPort = "8080"
-
-// func main() {
-
-// 	port := os.Getenv("PORT")
-// 	if port == "" {
-// 		port = defaultPort
-// 	}
-
-// 	srv := handler.NewDefaultServer(graphPkg.NewExecutableSchema(graphPkg.Config{Resolvers: &graph.Resolver{}}))
-
-// 	http.Handle("/", playground.Handler("GraphQL playground", "/query"))
-// 	http.Handle("/query", srv)
-
-// 	log.Printf("connect to http://localhost:%s/ for GraphQL playground", port)
-// 	log.Fatal(http.ListenAndServe(":"+port, nil))
-// }
-
 package main
 
 import (
@@ -54,7 +23,7 @@ import (
 	"graph-api/internal/core"
 
 	// "graph-api/internal/pkg/auth/jwt"
-	"graph-api/internal/pkg/client/login"
+	"graph-api/internal/pkg/client/afl"
 )
 
 func main() {
@@ -87,10 +56,10 @@ func main() {
 
 	monitoring.RegisterPrometheusSuffix()
 
-	loginCli := login.NewClient(ctx,
-		viper.GetString("env.svc.login.host"),
-		viper.GetInt("env.svc.login.port"),
-		viper.GetBool("env.svc.login.secure"),
+	aflCli := afl.NewClient(ctx,
+		viper.GetString("env.svc.afl.host"),
+		viper.GetInt("env.svc.afl.port"),
+		viper.GetBool("env.svc.afl.secure"),
 	)
 
 	// jwtVerifier, err := jwt.NewVerifier(&jwt.Config{HMACSecretKey: viper.GetString("env.jwt.hmac_secret")})
@@ -100,7 +69,7 @@ func main() {
 	// authH := authPkg.NewHandler(jwtVerifier, authCli)
 
 	graphAPI := graph.NewGraphAPI(
-		loginCli,
+		aflCli,
 	)
 
 	healthReady := healthcheck.NewHealthCheck(

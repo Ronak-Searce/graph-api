@@ -1,13 +1,13 @@
-input LoginInput{
+input LoginInput {
   username: String!
   password: String!
 }
 
-type LoginOutput{
+type LoginOutput {
   token: String!
   umpire: Umpire!
 }
 
 type Mutation {
-  login(input: LoginInput!): LoginOutput! #dummmy token
+  login(input: LoginInput!): LoginOutput!
 }

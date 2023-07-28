@@ -10,3 +10,7 @@ env:
       host: localhost
       port: 8082
       secure: false
+    afl:
+      host: localhost
+      port: 8082
+      secure: false
