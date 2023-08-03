@@ -27,6 +27,7 @@ func (i *Implementation) CreateUmpire(ctx context.Context, input graphPkg.NewUmp
 		Username: input.Username,
 		Fullname: input.Name,
 		Email:    input.Email,
+		Password: input.Password,
 	})
 	if err != nil {
 		return nil, err
