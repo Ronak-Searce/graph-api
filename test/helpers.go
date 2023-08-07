@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
-func helpCreateUmpire(ctx context.Context, t *testing.T, anon gqlclient.Anonymous) *gqlclient.Umpire {
+func helpCreateSingleUmpire(ctx context.Context, t *testing.T) *gqlclient.Umpire {
 	t.Helper()
+	return nil
 }
