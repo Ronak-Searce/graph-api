@@ -1,48 +1,26 @@
 package test
 
 import (
-	"fmt"
+	"context"
 	gqlclient "graph-api/pkg/gql-client"
-	"graph-api/pkg/graph"
+	"net/http"
 	"testing"
+	"time"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestCreateUmpire(t *testing.T) {
-	t.Log("check create group chat")
+	t.Log("check create umpire")
 
-	// ctx := context.Background()
+	ctx := context.Background()
 
-	// gql := gqlclient.NewGQLClient(&http.Client{
-	// 	Timeout: 5 * time.Second,
-	// })
-	// anon := gql.Anonymous()
-	username := getRandomString()
-	fullname := getRandomString()
-	email := getRandomEmail()
-	password := getRandomString()
+	gql := gqlclient.NewGQLClient(&http.Client{
+		Timeout: 5 * time.Second,
+	})
+	anon := gql.Anonymous()
 
-	body := fmt.Sprintf(`
-		mutation {
-			createUmpire(input:{username:"%s",password:"%s",email:"%s",name:"%s"}){
-   				username
-				name
-				email
-  			}
-		}
-	`, username, password, email, fullname)
+	_, err := anon.CreateUser(ctx)
 
-	var resp struct {
-		Data struct {
-			CreateUmpire graph.Umpire `json:"createUmpire"`
-		} `json:"data"`
-	}
-
-	err := gqlclient.Do(ctx, body, &resp)
-
-	// users := helpCreateUsers(ctx, t, anon, nUsers)
-
-	// user1, user2 := users[0], users[1]
-
-	// chat := helpCreateGroupChat(ctx, t, "e2e-group-chat", user1, user2)
-	// require.NotEmpty(t, chat.ID)
+	assert.Nil(t, err, "fail to create umpire")
 }
