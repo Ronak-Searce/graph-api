@@ -9,7 +9,7 @@ import(
 )
 
 
-func TestCreateUmpire(t *testing.T)
+func TestCreateUmpire2(t *testing.T)
 t.Log("check createUmpire")
 t.skip("bug")
 
