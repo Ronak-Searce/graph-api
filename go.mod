@@ -5,8 +5,8 @@ go 1.19
 require (
 	github.com/99designs/gqlgen v0.17.35
 	github.com/go-chi/chi v1.5.4
-	github.com/lyazii22/grpc-login v1.0.0
 	github.com/rs/cors v1.9.0
+	github.com/rs/zerolog v1.30.0
 	github.com/spf13/viper v1.16.0
 	github.com/vektah/gqlparser/v2 v2.5.7
 	gitlab.com/picnic-app/backend/libs/golang/config v0.3.0
@@ -15,6 +15,7 @@ require (
 	gitlab.com/picnic-app/backend/libs/golang/logger v0.3.0
 	gitlab.com/picnic-app/backend/libs/golang/monitoring v0.5.0
 	google.golang.org/grpc v1.57.0
+	google.golang.org/protobuf v1.31.0
 )
 
 require (
@@ -53,6 +54,8 @@ require (
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
+	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -103,7 +106,6 @@ require (
 	google.golang.org/genproto v0.0.0-20230526161137-0005af68ea54 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20230525234035-dd9d682886f9 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230525234030-28d5490b6b19 // indirect
-	google.golang.org/protobuf v1.31.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
