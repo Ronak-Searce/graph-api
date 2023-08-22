@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"gitlab.com/picnic-app/backend/libs/golang/logger"
+	"github.com/Ronak-Searce/graph-api/internal/pkg/logger"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/sdk/trace"
 	"go.uber.org/zap"
