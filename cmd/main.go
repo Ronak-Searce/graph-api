@@ -14,8 +14,8 @@ import (
 
 	"github.com/Ronak-Searce/graph-api/internal/pkg/config"
 	"github.com/Ronak-Searce/graph-api/internal/pkg/graceful"
-	"github.com/Ronak-Searce/graph-api/internal/pkg/logger"
 	"gitlab.com/picnic-app/backend/libs/golang/healthcheck"
+	"gitlab.com/picnic-app/backend/libs/golang/logger"
 	"gitlab.com/picnic-app/backend/libs/golang/monitoring/monitoring"
 	"gitlab.com/picnic-app/backend/libs/golang/monitoring/tracing"
 
