@@ -1,4 +1,0 @@
-include:
-  - project: "${CI_PROJECT_ROOT_NAMESPACE}/devops/cicd-lib"
-    ref: main
-    file: golang-module.yml
