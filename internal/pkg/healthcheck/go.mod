@@ -5,9 +5,8 @@ go 1.19
 require (
 	cloud.google.com/go/spanner v1.49.0
 	cloud.google.com/go/storage v1.32.0
+	github.com/Ronak-Searce/graph-api/internal/pkg/logger v0.0.0-20230822100326-2158936cec05
 	github.com/prometheus/client_golang v1.16.0
-	gitlab.com/picnic-app/backend/libs/golang/healthcheck v0.2.0
-	gitlab.com/picnic-app/backend/libs/golang/logger v0.3.1
 	google.golang.org/grpc v1.57.0
 )
 
