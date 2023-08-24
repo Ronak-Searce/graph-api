@@ -6,17 +6,20 @@ require (
 	github.com/99designs/gqlgen v0.17.36
 	github.com/go-chi/chi v1.5.4
 	github.com/rs/cors v1.9.0
-	github.com/spf13/cast v1.5.1
 	github.com/spf13/viper v1.16.0
 	github.com/vektah/gqlparser/v2 v2.5.8
-	gitlab.com/picnic-app/backend/libs/golang/config v0.4.0
 	gitlab.com/picnic-app/backend/libs/golang/graceful v0.3.0
 	gitlab.com/picnic-app/backend/libs/golang/healthcheck v0.2.0
-	gitlab.com/picnic-app/backend/libs/golang/logger v0.3.1
 	gitlab.com/picnic-app/backend/libs/golang/monitoring v0.5.0
-	google.golang.org/api v0.138.0
 	google.golang.org/grpc v1.57.0
 	google.golang.org/protobuf v1.31.0
+)
+
+require (
+	github.com/Ronak-Searce/graph-api/internal/pkg/logger v0.0.0-20230822100326-2158936cec05
+	github.com/spf13/cast v1.5.1 // indirect
+	gitlab.com/picnic-app/backend/libs/golang/config v0.4.0 // indirect
+	google.golang.org/api v0.138.0 // indirect
 )
 
 require (
@@ -107,3 +110,5 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+require gitlab.com/picnic-app/backend/libs/golang/logger v0.3.0 // indirect
