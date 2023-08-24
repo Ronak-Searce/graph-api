@@ -3,7 +3,7 @@ module github.com/Ronak-Searce/graph-api/internal/pkg/graceful
 go 1.19
 
 require (
-	github.com/Ronak-Searce/graph-api/internal/pkg/logger v0.3.1
+	github.com/Ronak-Searce/graph-api/internal/pkg/logger v0.0.0-20230822100326-2158936cec05
 	go.opentelemetry.io/otel v1.16.0
 	go.opentelemetry.io/otel/sdk v1.16.0
 	go.uber.org/zap v1.25.0
