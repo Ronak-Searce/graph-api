@@ -1,4 +1,4 @@
-module graph-api
+module github.com/Ronak-Searce/graph-api
 
 go 1.19
 
