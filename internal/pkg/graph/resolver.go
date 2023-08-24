@@ -1,7 +1,7 @@
 package graph
 
 import (
-	"graph-api/pkg/graph"
+	"github.com/Ronak-Searce/graph-api/pkg/graph"
 )
 
 // This file will not be regenerated automatically.

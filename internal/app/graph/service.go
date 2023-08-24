@@ -3,9 +3,9 @@ package graph
 import (
 	"context"
 
-	graphInt "graph-api/internal/pkg/graph"
+	graphInt "github.com/Ronak-Searce/graph-api/internal/pkg/graph"
 
-	aflPb "graph-api/api/proto/afl"
+	aflPb "github.com/Ronak-Searce/graph-api/api/proto/afl"
 )
 
 type IAflProvider interface {

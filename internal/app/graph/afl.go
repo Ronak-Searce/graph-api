@@ -2,9 +2,10 @@ package graph
 
 import (
 	"context"
-	graphPkg "graph-api/pkg/graph"
 
-	aflPb "graph-api/api/proto/afl"
+	graphPkg "github.com/Ronak-Searce/graph-api/pkg/graph"
+
+	aflPb "github.com/Ronak-Searce/graph-api/api/proto/afl"
 )
 
 func (i *Implementation) Login(ctx context.Context, input graphPkg.LoginInput) (*graphPkg.LoginOutput, error) {

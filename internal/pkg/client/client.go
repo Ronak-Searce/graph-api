@@ -11,7 +11,7 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"gitlab.com/picnic-app/backend/libs/golang/logger"
+	"github.com/Ronak-Searce/graph-api/internal/pkg/logger"
 )
 
 // common settings for connection

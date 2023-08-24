@@ -12,18 +12,19 @@ import (
 
 	"github.com/spf13/viper"
 
-	"gitlab.com/picnic-app/backend/libs/golang/config"
+	"github.com/Ronak-Searce/graph-api/internal/pkg/config"
 	"gitlab.com/picnic-app/backend/libs/golang/graceful"
 	"gitlab.com/picnic-app/backend/libs/golang/healthcheck"
 	"gitlab.com/picnic-app/backend/libs/golang/logger"
 	"gitlab.com/picnic-app/backend/libs/golang/monitoring/monitoring"
 	"gitlab.com/picnic-app/backend/libs/golang/monitoring/tracing"
 
-	"graph-api/internal/app/graph"
-	"graph-api/internal/core"
+	"github.com/Ronak-Searce/graph-api/internal/core"
+
+	"github.com/Ronak-Searce/graph-api/internal/app/graph"
 
 	// "graph-api/internal/pkg/auth/jwt"
-	"graph-api/internal/pkg/client/afl"
+	"github.com/Ronak-Searce/graph-api/internal/pkg/client/afl"
 )
 
 func main() {

@@ -3,11 +3,11 @@ package afl
 import (
 	"context"
 
-	aflPb "graph-api/api/proto/afl"
+	aflPb "github.com/Ronak-Searce/graph-api/api/proto/afl"
 
 	"gitlab.com/picnic-app/backend/libs/golang/monitoring/tracing"
 
-	grpcCli "graph-api/internal/pkg/client"
+	grpcCli "github.com/Ronak-Searce/graph-api/internal/pkg/client"
 	// "graph-api/internal/pkg/model"
 )
 

@@ -18,10 +18,11 @@ import (
 	"gitlab.com/picnic-app/backend/libs/golang/healthcheck"
 	"gitlab.com/picnic-app/backend/libs/golang/monitoring/tracing"
 
-	"graph-api/internal/app/graph"
-	graphInt "graph-api/internal/pkg/graph"
+	graphInt "github.com/Ronak-Searce/graph-api/internal/pkg/graph"
 
-	graphGen "graph-api/pkg/graph"
+	"github.com/Ronak-Searce/graph-api/internal/app/graph"
+
+	graphGen "github.com/Ronak-Searce/graph-api/pkg/graph"
 )
 
 // const banResponse = "You can not perform this operation"

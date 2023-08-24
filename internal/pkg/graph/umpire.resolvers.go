@@ -6,7 +6,8 @@ package graph
 
 import (
 	"context"
-	"graph-api/pkg/graph"
+
+	"github.com/Ronak-Searce/graph-api/pkg/graph"
 )
 
 // CreateUmpire is the resolver for the createUmpire field.
