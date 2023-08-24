@@ -16,7 +16,7 @@ import (
 	"github.com/rs/cors"
 
 	"github.com/Ronak-Searce/graph-api/internal/pkg/healthcheck"
-	"gitlab.com/picnic-app/backend/libs/golang/monitoring/tracing"
+	"github.com/Ronak-Searce/graph-api/internal/pkg/monitoring/tracing"
 
 	graphInt "github.com/Ronak-Searce/graph-api/internal/pkg/graph"
 

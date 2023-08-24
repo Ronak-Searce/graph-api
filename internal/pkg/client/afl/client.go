@@ -5,7 +5,7 @@ import (
 
 	aflPb "github.com/Ronak-Searce/graph-api/api/proto/afl"
 
-	"gitlab.com/picnic-app/backend/libs/golang/monitoring/tracing"
+	"github.com/Ronak-Searce/graph-api/internal/pkg/monitoring/tracing"
 
 	grpcCli "github.com/Ronak-Searce/graph-api/internal/pkg/client"
 	// "graph-api/internal/pkg/model"
