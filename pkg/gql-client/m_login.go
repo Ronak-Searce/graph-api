@@ -3,7 +3,8 @@ package gqlclient
 import (
 	"context"
 	"fmt"
-	graph "graph-api/pkg/graph"
+
+	graph "github.com/Ronak-Searce/graph-api/pkg/graph"
 )
 
 type LoginResponse struct {

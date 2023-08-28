@@ -3,7 +3,8 @@ package gqlclient
 import (
 	"context"
 	"fmt"
-	"graph-api/pkg/graph"
+
+	"github.com/Ronak-Searce/graph-api/pkg/graph"
 )
 
 func (u *User) CreateUmpire(ctx context.Context) error {

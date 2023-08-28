@@ -2,10 +2,11 @@ package test
 
 import (
 	"context"
-	gqlclient "graph-api/pkg/gql-client"
 	"net/http"
 	"testing"
 	"time"
+
+	gqlclient "github.com/Ronak-Searce/graph-api/pkg/gql-client"
 
 	"github.com/stretchr/testify/assert"
 )

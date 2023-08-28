@@ -2,9 +2,10 @@ package test
 
 import (
 	"context"
-	gqlclient "graph-api/pkg/gql-client"
-	graph "graph-api/pkg/graph"
 	"testing"
+
+	gqlclient "github.com/Ronak-Searce/graph-api/pkg/gql-client"
+	graph "github.com/Ronak-Searce/graph-api/pkg/graph"
 
 	"github.com/stretchr/testify/require"
 )
